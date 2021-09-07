@@ -1,5 +1,4 @@
-import react from 'react';
-import movies from '/'
+import React from 'react';
 
 class SearchBar extends React.Component {
   render() {
@@ -11,11 +10,21 @@ class SearchBar extends React.Component {
       selectedGenre,
       onSelectedGenreChange
     } = this.props;
+
     return (
       <form data-testid="search-bar-form">
-        <label htmlFor="searchText" data-testid="text-input-label"
+        <label htmlFor="searchText" data-testid="text-input-label" >
+          <input
+            type="text"
+            name="searcheText"
+            data-testid="text-input"
+            value={ searchText }
+            // bySilas
+            onChange={ onSearchTextChange }
+          />
+        </label>
       </form>
-    )
+    );
   }
 }
 
