@@ -49,7 +49,8 @@ class AddMovie extends React.Component {
             </label>
             <label data-testid="image-input-label"
             >Imagem
-              <input type="text"
+              <input
+                type="text"
                 name="imagePath"
                 data-testid="image-input"
                 onChange={this.handleChange}
@@ -57,16 +58,38 @@ class AddMovie extends React.Component {
               />
             </label>
             <label data-testid="storyline-input-label">
-              <textarea name="storyline" data-testid="storyline-input"
+              <textarea
+                type="text"
+                name="storyline" data-testid="storyline-input"
                 onChange={this.handleChange}
                 value={state.storyline}>
                 Sinopse
               </textarea>
             </label>
             <label data-testid="rating-input-label">
-              <input name="rating" data-testid="rating-input"
+              <input
+                type="number"
+                name="rating" data-testid="rating-input"
                 onChange={this.handleChange}
-                value={state.rating}>Avaliação</input>
+                value={state.rating}>
+                Avaliação
+              </input>
+            </label>
+            <label data-testid="genre-input-label">
+              <select
+                name="genre"
+                data-testid="genre-input"
+                onChange={this.handleChange}
+                value={state.genre}
+              >Gênero
+                <option data-testid="genre-option"
+                  value="action">Ação</option>
+                <option data-testid="genre-option"
+                  value="comedy">Comédia</option>
+                <option data-testid="genre-option"
+                  value="thriller">Suspense</option>
+
+              </select>
             </label>
           </form>
         </div>
