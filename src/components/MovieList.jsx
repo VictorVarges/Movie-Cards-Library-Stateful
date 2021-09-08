@@ -22,3 +22,10 @@ MovieList.propTypes = {
 };
 
 export default MovieList;
+// {/* searchText={searchText}
+// onSearchTextChange={this.handleChange}
+// bookmarkedOnly={bookmarkedOnly}
+// selectedGenre={selectedGenre}
+// onSelectedGenreChange={this.handleChange}
+// onBookmarkedChange={this.handleChange}
+// <MovieList movies={ movies } */}

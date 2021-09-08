@@ -64,11 +64,3 @@ SearchBar.propTypes = {
 };
 
 export default SearchBar;
-// this.state = {
-//   searchText: '',
-//   onSearchTextChange: () => (undefined),
-//   bookmarkedOnly: false,
-//   onBookmarkedChange: () => (undefined),
-//   selectedGenre: '',
-//   onSelectedGenreChange: () => (undefined)
-// }
