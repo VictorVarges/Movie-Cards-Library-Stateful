@@ -38,9 +38,10 @@ class AddMovie extends React.Component {
   }
 
   handleChange = ({ target }) => {
-    const { name, value } = target;
+    const { name } = target;
+    const check = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
-      [name]: value,
+      [name]: check,
     });
   }
 
@@ -54,7 +55,11 @@ class AddMovie extends React.Component {
         <TextSinopse value={ storyline } onChange={ this.handleChange } />
         <InputRating value={ rating } onChange={ this.handleChange } />
         <SelectGenre value={ genre } onChange={ this.handleChange } />
-        <button type="submit" data-testid="send-button">
+        <button
+          // onClick={ this.onClick }
+          type="submit"
+          data-testid="send-button"
+        >
           Adicionar filme
         </button>
       </form>
